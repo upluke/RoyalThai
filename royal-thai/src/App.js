@@ -1,8 +1,8 @@
- 
+import IndexPage from "../src/components/IndexPage"
 function App() {
   return (
     <div className="App">
-       <h1>Thai</h1>
+       <IndexPage/>
     </div>
   );
 }
