@@ -8,16 +8,18 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
+import { Link } from "react-router-dom";
+
 
 const useStyles = makeStyles((theme)=>({
   root: {
     maxWidth: 345,
     margin: "auto",
-    marginTop:theme.spacing(9.5),
+    // marginTop:theme.spacing(6),
     padding: theme.spacing(4),
     height: theme.spacing(50),
     width: theme.spacing(49),
-    align:"center"
+    // align:"center"
   },
   media: {
     height: 90,
@@ -48,8 +50,8 @@ export default function Category({category}) {
                 </CardContent>
                 </CardActionArea>
                 <CardActions>
-                <Button size="small" color="primary">
-                    Share
+                <Button size="small" color="primary" onClick={()=>console.log("911")}>
+                   <Link to="/menu"> Share</Link>
                 </Button>
                 <Button size="small" color="primary">
                     Learn More

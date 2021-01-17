@@ -3,9 +3,12 @@ import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import {useSelector} from 'react-redux'
 import Category from '../Category/Category'
+
+
 const useStyles = makeStyles((theme) => ({
     gridStyle:{
       minHeight:"85vh",
+      padding:theme.spacing(6)
     }
  
   }));
