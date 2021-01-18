@@ -7,8 +7,7 @@ import Category from '../Category/Category'
 
 const useStyles = makeStyles((theme) => ({
     gridStyle:{
-      minHeight:"85vh",
-      padding:theme.spacing(6)
+      paddingBottom:theme.spacing(15)
     }
  
   }));
@@ -19,11 +18,11 @@ export default function Categories() {
     console.log(categories)
     return (
         <React.Fragment  >
-            <Grid container spacing={0} justify="center" justify="center" className={classes.gridStyle}  >
+            <Grid container spacing={0} justify="center" className={classes.gridStyle}  >
  
              {categories.map(el=>{
                 
-                return  <Category category={el.category}/>
+                return  <Category key={el.id} category={el.category}/>
               
                   })}
             </Grid>

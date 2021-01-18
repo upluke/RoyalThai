@@ -9,7 +9,7 @@ export default function Footer() {
   return (
     <React.Fragment>
       <CssBaseline />
-      <Container maxWidth='false'  style={{ backgroundColor: '#646C79', height: '30vh'   }} >
+      <Container maxWidth='xl'  style={{ backgroundColor: '#646C79', height: '30vh'   }} >
             <Typography align="center" variant="h2">Test</Typography>
         
       </Container>

@@ -9,7 +9,7 @@ export default function Hero() {
   return (
     <React.Fragment>
       <CssBaseline />
-      <Container maxWidth='false'  style={{ backgroundColor: '#FB9039', height: '50vh'   }} >
+      <Container maxWidth='xl'  style={{ backgroundColor: '#FB9039', height: '50vh'   }} >
             <Typography align="center" variant="h2">Test</Typography>
             <Button  color="inherit">Login</Button>
       </Container>
