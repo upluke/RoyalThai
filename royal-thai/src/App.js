@@ -1,5 +1,5 @@
 import IndexPage from "../src/components/IndexPage"
-import Menu from './components/Menu/Menu'
+import MenuPage from './components/MenuPage/MenuPage'
 import { BrowserRouter as Router, Route} from "react-router-dom";
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
     <Router>
       <div className="App">
         <Route exact path="/" component={IndexPage} />
-        <Route exact path="/menu" component={Menu} />
+        <Route exact path="/menu" component={MenuPage} />
       </div>
     </Router>
   );
