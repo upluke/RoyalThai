@@ -17,8 +17,8 @@ export default function MenuPage() {
         setAnchorEl(null);
     };
     return (
-        <div>
-            <NavBar />
+        <div >
+            {/* <NavBar /> */}
             <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
                 Open Menu
             </Button>

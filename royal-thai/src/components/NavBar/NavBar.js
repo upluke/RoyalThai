@@ -4,7 +4,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
- 
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -28,11 +28,11 @@ export default function NavBar() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static" className={classes.navBar}>
+      <AppBar position="fixed" className={classes.navBar}>
         <Toolbar>
  
           <Typography variant="h6" className={classes.title}>
-            Royal Thai Restaurant
+           <Link to="/"  style={{ color: 'inherit', textDecoration: 'inherit'}}> Royal Thai Restaurant</Link>
           </Typography>
           <Button color="inherit">Login</Button>
           <Button color="inherit">Login</Button>

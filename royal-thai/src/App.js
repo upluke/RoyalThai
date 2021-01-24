@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Route} from "react-router-dom";
 function App() {
   return (
     <Router>
-      <div className="App">
+      <div className="App" >
         <Route exact path="/" component={IndexPage} />
         <Route exact path="/menu" component={MenuPage} />
       </div>
