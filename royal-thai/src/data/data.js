@@ -1,3 +1,4 @@
+export const categories=['Appetizers','Soups', 'Noodle Soups']
 export const MENU_DATA =[
     {
         id:0,

@@ -12,18 +12,15 @@ const useStyles = makeStyles((theme) => ({
  
   }));
 
-export default function Categories() {
-    const categories=useSelector(state=>state)
+export default function Categories() {  
+    const categories=useSelector(state=>state.categories)
     const classes = useStyles();
-    console.log(categories)
     return (
         <React.Fragment  >
             <Grid container spacing={0} justify="center" className={classes.gridStyle}  >
  
-             {categories.map(el=>{
-                
-                return  <Category key={el.id} category={el.category}/>
-              
+             {categories.map((el,idx)=>{
+                return  <Category key={idx} category={el} id={idx}/>
                   })}
             </Grid>
           

@@ -1,13 +1,14 @@
-import React from 'react';
+import React,{usestate} from 'react';
 import Button from '@material-ui/core/Button';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import NavBar from '../NavBar/NavBar'
 import {useSelector} from 'react-redux'
 
-export default function MenuPage() {
-    const categories=useSelector(state=>state)
-    const [anchorEl, setAnchorEl] = React.useState(null);
+export default function MenuPage() {x
+    const categories=useSelector(dataState=>state)
+    const [selectedEl, setSelectedEl]=usestate()
+    const [anchorEl, setAnchorEl] = useState(null);
 
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
@@ -16,10 +17,18 @@ export default function MenuPage() {
     const handleClose = () => {
         setAnchorEl(null);
     };
+
+    const handleSelected= category=>{
+        setSelectedEl(category)
+    }
     return (
         <div >
-            {/* <NavBar /> */}
-            <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
+            <NavBar />
+            <br/>
+            <br/>
+            <h1>Menu page</h1>
+           
+            <Button  aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
                 Open Menu
             </Button>
             <Menu
@@ -38,7 +47,8 @@ export default function MenuPage() {
                 {/* <MenuItem onClick={handleClose}>My account</MenuItem>
                 <MenuItem onClick={handleClose}>Logout</MenuItem> */}
             </Menu>
-            <h1>Menu page</h1>
+            
         </div>
+        
     )
 }

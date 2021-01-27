@@ -1,6 +1,12 @@
-import {MENU_DATA} from "./states"
+import {MENU_DATA, categories} from "./states"
 
-export const reducer=(state=MENU_DATA, action)=>{
+export const categoriesReducer=(state=categories, action)=>{
+    return categories
+}
+
+export const dataReducer=(state=MENU_DATA, action)=>{
     return MENU_DATA
 }
+
+
 
