@@ -20,7 +20,7 @@ export default function Categories() {
             <Grid container spacing={0} justify="center" className={classes.gridStyle}  >
  
              {categories.map((el,idx)=>{
-                return  <Category key={idx} category={el} id={idx}/>
+                return  <Category key={idx} category={el} />
                   })}
             </Grid>
           

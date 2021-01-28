@@ -1,13 +1,13 @@
-import React,{usestate} from 'react';
+import React,{useState} from 'react';
 import Button from '@material-ui/core/Button';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import NavBar from '../NavBar/NavBar'
 import {useSelector} from 'react-redux'
 
-export default function MenuPage() {x
-    const categories=useSelector(dataState=>state)
-    const [selectedEl, setSelectedEl]=usestate()
+export default function MenuPage() {
+    const categories=useSelector(state=>state.categories)
+    // const [selectedEl, setSelectedEl]=usestate()
     const [anchorEl, setAnchorEl] = useState(null);
 
     const handleClick = (event) => {
@@ -18,9 +18,9 @@ export default function MenuPage() {x
         setAnchorEl(null);
     };
 
-    const handleSelected= category=>{
-        setSelectedEl(category)
-    }
+    // const handleSelected= category=>{
+    //     setSelectedEl(category)
+    // }
     return (
         <div >
             <NavBar />
@@ -39,8 +39,8 @@ export default function MenuPage() {x
                 onClose={handleClose}
             >
                 {
-                    categories.map(el=>(
-                        <MenuItem onClick={handleClose}>{el.category}</MenuItem>
+                    categories.map((el,idx)=>(
+                        <MenuItem key={idx} onClick={handleClose}>{el}</MenuItem>
                     ))
                 }
                 
