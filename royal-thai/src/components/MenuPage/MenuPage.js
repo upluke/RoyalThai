@@ -22,21 +22,37 @@ const useStyles = makeStyles((theme) => ({
 export default function MenuPage() {
     const classes = useStyles();
     const categories=useSelector(state=>state.categories)
+    const data=useSelector(state=>state.data)
     const [selectedEl, setSelectedEl]=useState('')
      
 
     const handleChange = (event) => {
         setSelectedEl(event.target.value);
       };
-
-    console.log(selectedEl)
+    
+    const getItemsByCategories=()=>{
+        return Object.entries(
+           data.reduce((datas , data)=>{
+             
+                const {category}=data
+                console.log("category: ",category)
+                datas[category]=datas[category]
+                ?[...datas[category],data]
+                :[data]
+                return datas
+            
+        },{})
+        )
+    }
+    let newDatas=getItemsByCategories()
+    console.log("newdate: ", newDatas)
     return (
         <div >
             <NavBar />
             <br/>
             <br/>
             <h1>Menu page</h1>
-
+            <button onClick={getItemsByCategories}>Ok</button>
             <FormControl className={classes.formControl}>
                 <InputLabel id="demo-simple-select-label">Categories</InputLabel>
                 <Select
@@ -51,7 +67,13 @@ export default function MenuPage() {
                     ))
                 }
                 </Select>
-            </FormControl>        
+            </FormControl>   
+            {
+                newDatas.map(([category, items])=>{
+                    console.log(category,"--->", items)
+                })
+            }
+
         </div>
         
     )
