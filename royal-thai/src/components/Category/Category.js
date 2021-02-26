@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme)=>({
 export default function Category({category}) {
 
     const classes = useStyles();
-    console.log("cate: ", category)
+   
     return (
         <Grid item xs={12} sm={6} lg={2}>
             <Card className={classes.root}>

@@ -8,6 +8,7 @@ import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import { makeStyles } from '@material-ui/core/styles';
 import InputLabel from '@material-ui/core/InputLabel';
+import Items from '../Items/Items'
 
 const useStyles = makeStyles((theme) => ({
     formControl: {
@@ -24,18 +25,21 @@ export default function MenuPage() {
     const categories=useSelector(state=>state.categories)
     const data=useSelector(state=>state.data)
     const [selectedEl, setSelectedEl]=useState('')
+
+    
      
 
     const handleChange = (event) => {
         setSelectedEl(event.target.value);
       };
-    
+
+
     const getItemsByCategories=()=>{
         return Object.entries(
            data.reduce((datas , data)=>{
              
                 const {category}=data
-                console.log("category: ",category)
+                // console.log("category: ",category)
                 datas[category]=datas[category]
                 ?[...datas[category],data]
                 :[data]
@@ -45,7 +49,8 @@ export default function MenuPage() {
         )
     }
     let newDatas=getItemsByCategories()
-    console.log("newdate: ", newDatas)
+    // console.log("newdate: ", newDatas)
+    // console.log("selected element: ", selectedEl)
     return (
         <div >
             <NavBar />
@@ -70,7 +75,18 @@ export default function MenuPage() {
             </FormControl>   
             {
                 newDatas.map(([category, items])=>{
-                    console.log(category,"--->", items)
+                    // console.log(category,"--->", items)
+                    if(category===selectedEl){
+                        console.log("display", items)
+                        items.map((item,idx)=>{
+                            console.log(item.name, idx)
+                            return <h1>{item.name}</h1>
+                            
+                           
+                            
+                        })
+                          
+                    }
                 })
             }
 
