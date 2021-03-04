@@ -78,10 +78,9 @@ export default function MenuPage() {
                     // console.log(category,"--->", items)
                     if(category===selectedEl){
                         console.log("display", items)
-                        return items.map((item,idx)=>{
-                            console.log(item.name, idx)
-                            return <h1 key={idx}>{item.name}</h1>
-                            
+                        return items.map(item=>{
+                            console.log(item)
+                            return <Items key={item.id} itemName={item.name} price={item.price} description={item.description} />
                            
                             
                         })
