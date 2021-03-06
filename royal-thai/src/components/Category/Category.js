@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme)=>({
 export default function Category({category}) {
 
     const classes = useStyles();
-   
+
     return (
         <Grid item xs={12} sm={6} lg={2}>
             <Card className={classes.root}>
@@ -50,7 +50,7 @@ export default function Category({category}) {
                 </CardContent>
                 </CardActionArea>
                 <CardActions>
-                <Button size="small" color="primary" onClick={()=>console.log("911")}>
+                <Button size="small" color="primary" onClick={(e)=>console.log(category)}>
                    <Link to="/menu"> Share</Link>
                 </Button>
                 <Button size="small" color="primary">
