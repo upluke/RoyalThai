@@ -9,7 +9,7 @@ import Select from '@material-ui/core/Select';
 import { makeStyles } from '@material-ui/core/styles';
 import InputLabel from '@material-ui/core/InputLabel';
 import Items from '../Items/Items'
-import {getItemsByCategories} from '../../redux/actions'
+
 
 const useStyles = makeStyles((theme) => ({
     formControl: {
@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
 export default function MenuPage() {
     const classes = useStyles();
     const categories=useSelector(state=>state.categories)
-    // const data=useSelector(state=>state.data)
+    const data=useSelector(state=>state.data)
     const [selectedEl, setSelectedEl]=useState('')
      
     
@@ -37,27 +37,23 @@ export default function MenuPage() {
      
  
 
-    // const getItemsByCategories=()=>{
-    //     return Object.entries(
-    //        data.reduce((datas , data)=>{
+    const getItemsByCategories=()=>{
+        return Object.entries(
+           data.reduce((datas , data)=>{
              
-    //             const {category}=data
-    //             // console.log("category: ",category)
-    //             datas[category]=datas[category]
-    //             ?[...datas[category],data]
-    //             :[data]
-    //             return datas
+                const {category}=data
+                // console.log("category: ",category)
+                datas[category]=datas[category]
+                ?[...datas[category],data]
+                :[data]
+                return datas
             
-    //     },{})
-    //     )
-    // }
-    // let newDatas=getItemsByCategories()
+        },{})
+        )
+    }
+    let newDatas=getItemsByCategories()
     
-    const dispatch=useDispatch()
-    
-    const test=getItemsByCategories()
-     
-    console.log(">>>>",  test)
+    console.log(newDatas)
      
  
     
@@ -69,8 +65,8 @@ export default function MenuPage() {
             <br/>
             <br/>
             <h1>Menu page</h1>
-            {/* <button onClick={getItemsByCategories}>Ok</button> */}
-            <button onClick={()=>console.log("@", dispatch(test))}>Ok</button>
+            
+    
             <FormControl className={classes.formControl}>
                 <InputLabel id="demo-simple-select-label">Categories</InputLabel>
                 <Select
@@ -86,7 +82,7 @@ export default function MenuPage() {
                 }
                 </Select>
             </FormControl>   
-            {/* {
+            {
                 newDatas.map(([category, items])=>{
                     // console.log(category,"--->", items)
                     if(category===selectedEl){
@@ -100,7 +96,7 @@ export default function MenuPage() {
                           
                     }
                 })
-            } */}
+            }
 
         </div>
         

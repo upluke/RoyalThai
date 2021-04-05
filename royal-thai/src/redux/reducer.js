@@ -5,27 +5,8 @@ export const categoriesReducer=(state=categories, action)=>{
 }
 
 export const dataReducer=(state=MENU_DATA, action)=>{
-     
-    switch(action.type){
-       
-        case 'GETITEMSBYCATEGORIES':
-            
-            return Object.entries(
-                MENU_DATA.reduce((datas , data)=>{
-                 
-                    const {category}=data
-                    // console.log("category: ",category)
-                    datas[category]=datas[category]
-                    ?[...datas[category],data]
-                    :[data]
-                    console.log("in state: ", datas)
-                    return datas
-                 
-             },{})
-             )
-        default:
-            return null
-    }
+    return state
+    
     // return MENU_DATA
 }
 
