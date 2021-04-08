@@ -42,7 +42,7 @@ export default function MenuPage() {
            data.reduce((datas , data)=>{
              
                 const {category}=data
-                // console.log("category: ",category)
+                console.log("category-------->: ",category)
                 datas[category]=datas[category]
                 ?[...datas[category],data]
                 :[data]
@@ -51,9 +51,9 @@ export default function MenuPage() {
         },{})
         )
     }
-    let newDatas=getItemsByCategories()
-    
+    let newDatas=getItemsByCategories("Salads")
     console.log(newDatas)
+    console.log(newDatas.Salads, "okkkkkk")
      
  
     
