@@ -51,9 +51,8 @@ export default function MenuPage() {
         },{})
         )
     }
-    let newDatas=getItemsByCategories("Salads")
-    console.log(newDatas)
-    console.log(newDatas.Salads, "okkkkkk")
+    let newDatas=getItemsByCategories()
+   
      
  
     
