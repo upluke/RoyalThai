@@ -7,7 +7,7 @@ function App() {
     <Router>
       <div className="App" >
         <Route exact path="/" component={IndexPage} />
-        <Route exact path="/menu" component={MenuPage} />
+        <Route exact path="/menu/:category" component={MenuPage} />
       </div>
     </Router>
   );

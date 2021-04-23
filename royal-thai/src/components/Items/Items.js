@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardMedia from '@material-ui/core/CardMedia';
@@ -46,6 +46,7 @@ export default function Items({itemName, description}) {
     const handleExpandClick = () => {
         setExpanded(!expanded);
       };
+
     return (
         <div >
             <Card className={classes.root}>

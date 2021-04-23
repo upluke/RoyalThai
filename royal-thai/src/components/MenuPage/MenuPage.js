@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
     },
   }));
 
-export default function MenuPage() {
+export default function MenuPage(props) {
     const classes = useStyles();
     const categories=useSelector(state=>state.categories)
     const data=useSelector(state=>state.data)
@@ -29,7 +29,7 @@ export default function MenuPage() {
      
     
      
-
+    
     const handleChange = (event) => {
         setSelectedEl(event.target.value);
       };
@@ -53,7 +53,7 @@ export default function MenuPage() {
     }
     let newDatas=getItemsByCategories()
    
-     
+     console.log("props: ", props)
  
     
     // console.log("newdate: ", newDatas)
@@ -85,7 +85,7 @@ export default function MenuPage() {
                 newDatas.map(([category, items])=>{
                     // console.log(category,"--->", items)
                     if(category===selectedEl){
-                        console.log("display", items)
+                      
                         return items.map(item=>{
                             console.log(item)
                             return <Items key={item.id} itemName={item.name} price={item.price} description={item.description} />

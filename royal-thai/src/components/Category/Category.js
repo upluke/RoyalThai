@@ -50,8 +50,8 @@ export default function Category({category}) {
                 </CardContent>
                 </CardActionArea>
                 <CardActions>
-                <Button size="small" color="primary" onClick={(e)=>console.log(category)}>
-                   <Link to="/menu"> Share</Link>
+                <Button size="small" color="primary" onClick={(e)=>console.log("cate",category)}>
+                   <Link to={"/menu/"+category}> Share</Link>
                 </Button>
                 <Button size="small" color="primary">
                     Learn More
