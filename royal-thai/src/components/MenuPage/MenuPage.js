@@ -22,10 +22,11 @@ const useStyles = makeStyles((theme) => ({
   }));
 
 export default function MenuPage(props) {
+    let paramCategory=props.match.url.split("/").pop()
     const classes = useStyles();
     const categories=useSelector(state=>state.categories)
     const data=useSelector(state=>state.data)
-    const [selectedEl, setSelectedEl]=useState('')
+    const [selectedEl, setSelectedEl]=useState(paramCategory)
      
     
      
@@ -53,8 +54,9 @@ export default function MenuPage(props) {
     }
     let newDatas=getItemsByCategories()
    
-     console.log("props: ", props)
- 
+    // console.log("props-->: ", props.match.url.split("/").pop())
+    
+    
     
     // console.log("newdate: ", newDatas)
     // console.log("selected element: ", selectedEl)
