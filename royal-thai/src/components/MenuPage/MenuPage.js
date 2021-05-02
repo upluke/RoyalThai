@@ -42,6 +42,7 @@ export default function MenuPage(props) {
         return Object.entries(
            data.reduce((datas , data)=>{
                 const {category}=data
+                console.log("inside, category", category)
                 datas[category]=datas[category]
                 ?[...datas[category],data]
                 :[data]
@@ -76,7 +77,7 @@ export default function MenuPage(props) {
                 >
                 {
                     categories.map((el,idx)=>(
-                        <MenuItem key={idx} value={el} >{el}</MenuItem>
+                        <MenuItem key={idx} value={el} >{el.replace('_',' ')}</MenuItem>
                     ))
                 }
                 </Select>

@@ -1,4 +1,4 @@
-export const categories=['Appetizers','Soups', 'Noodle Soups', 'Salads', 'Noodle Plates']
+export const categories=['Appetizers','Soups', 'Noodle_Soups', 'Salads', 'Noodle_Plates']
 export const MENU_DATA =[
             {
                 id:"Sampler for 2",
@@ -47,21 +47,21 @@ export const MENU_DATA =[
                 name:'Thai noodle soup',
                 price: 9.95,
                 description: 'Thin rice noodle in clear broth with bean sprout, fried garlic, scallion and cilantro. Choice of chicken, beef, pork or tofu.',
-                category:'Noodle Soups',
+                category:'Noodle_Soups',
             },
             {
                 id:'Thai boat noodle soup',
                 name:'Thai boat noodle soup',
                 price: 12.95,
                 description:'Thin rice noodle, bean sprout, Chinese broccoli and slice tender beef in beef broth.',
-                category:'Noodle Soups',
+                category:'Noodle_Soups',
             },
             {
                 id:'Kow soy',
                 name:'Kow soy',
                 price: 11.95,
                 description:'Ramen noodle in a yellow curry broth served with lime and red onion. Choice of chicken, beef, pork, tofu or vegetable.',
-                category:'Noodle Soups',
+                category:'Noodle_Soups',
             },
             {
                 id:'Cucumber Salad',
@@ -89,21 +89,21 @@ export const MENU_DATA =[
                 name:'Royal Thai noodle',
                 price: 12.95,
                 description: 'Crispy wide rice noodle topped with bok choy, bamboo shoot, mushroom, baby corn, onion, carrot and peapod in our house special sauce.',
-                category:'Noodle Plates',
+                category:'Noodle_Plates',
             },
             {
                 id:'Seafood royal Thai noodle',
                 name:'Seafood royal Thai noodle',
                 price: 14.95,
                 description:'Crispy wide rice noodle topped with shrimp, scallop, squid, bok choy, bamboo shoot, mushroom, baby corn, onion, carrot and peapod in our house special sauce.',
-                category:'Noodle Plates',
+                category:'Noodle_Plates',
             },
             {
                 id:'Pad Thai',
                 name:'Pad Thai',
                 price: 10.95,
                 description:'Thin rice noodle stir-fried with choice of meat, egg, tofu, bean sprout, green chive, and crushed peanut.',
-                category:'Noodle Plates',
+                category:'Noodle_Plates',
             }
     
 

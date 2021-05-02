@@ -11,8 +11,8 @@ import Grid from '@material-ui/core/Grid';
 import { Link } from "react-router-dom";
  
 import Appetizers  from "../../images/Appetizers.png"
-import NoodlePlates  from "../../images/NoodlePlates.png"
-import NoodleSoups  from "../../images/NoodleSoups.png"
+import Noodle_Plates  from "../../images/NoodlePlates.png"
+import Noodle_Soups  from "../../images/NoodleSoups.png"
 import Salads  from "../../images/Salads.png"
 import Soups  from "../../images/Soups.png"
 
@@ -39,8 +39,8 @@ export default function Category({category}) {
     const classes = useStyles();
     const imgHash={
       Appetizers,
-      NoodlePlates,
-      NoodleSoups,
+      Noodle_Plates,
+      Noodle_Soups,
       Salads,
       Soups
     }
@@ -59,7 +59,7 @@ export default function Category({category}) {
                 />
                 <CardContent>
                     <Typography gutterBottom variant="h5" component="h2">
-                    {category}
+                    {category.replace('_',' ')}
                     </Typography>
                     <Typography variant="body2" color="textSecondary" component="p">
                     Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
