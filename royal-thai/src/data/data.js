@@ -1,4 +1,4 @@
-export const categories=['Appetizers','Soups', 'Noodle Soups', 'Salads', 'Noodle Plates']
+export const categories=['Appetizers','Soups', 'NoodleSoups', 'Salads', 'NoodlePlates']
 export const MENU_DATA =[
     {
         id:0,

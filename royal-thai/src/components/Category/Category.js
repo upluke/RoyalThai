@@ -9,7 +9,12 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import { Link } from "react-router-dom";
-
+ 
+import Appetizers  from "../../images/Appetizers.png"
+import NoodlePlates  from "../../images/NoodlePlates.png"
+import NoodleSoups  from "../../images/NoodleSoups.png"
+import Salads  from "../../images/Salads.png"
+import Soups  from "../../images/Soups.png"
 
 const useStyles = makeStyles((theme)=>({
   root: {
@@ -23,20 +28,33 @@ const useStyles = makeStyles((theme)=>({
   },
   media: {
     height: 90,
+    paddingTop: '56.25%', // 16:9,
+    marginTop:'30',
+    // backgroundImage:'url(../../images/testpic1.png)'
   },
 }));
 
 export default function Category({category}) {
 
     const classes = useStyles();
+    const imgHash={
+      Appetizers,
+      NoodlePlates,
+      NoodleSoups,
+      Salads,
+      Soups
+    }
 
+ 
     return (
         <Grid item xs={12} sm={6} lg={2}>
             <Card className={classes.root}>
                 <CardActionArea>
                 <CardMedia
                     className={classes.media}
-                    image="/static/images/cards/contemplative-reptile.jpg"
+                    // style = {{ height: "50px", paddingTop: '56%'}}
+                    image={imgHash[category]} 
+                
                     title="Contemplative Reptile"
                 />
                 <CardContent>

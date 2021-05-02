@@ -41,9 +41,7 @@ export default function MenuPage(props) {
     const getItemsByCategories=()=>{
         return Object.entries(
            data.reduce((datas , data)=>{
-             
                 const {category}=data
-                console.log("category-------->: ",category)
                 datas[category]=datas[category]
                 ?[...datas[category],data]
                 :[data]
