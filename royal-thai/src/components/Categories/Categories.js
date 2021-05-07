@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import {useSelector} from 'react-redux'
 import Category from '../Category/Category'
+import { Description } from '@material-ui/icons';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -14,7 +15,11 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Categories() {  
     const categories=useSelector(state=>state.categories)
+    const data=useSelector(state=>state.data)
+
     const classes = useStyles();
+
+ 
     return (
         <React.Fragment  >
             <Grid container spacing={0} justify="center" className={classes.gridStyle}  >

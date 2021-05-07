@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme)=>({
     height: 90,
     paddingTop: '56.25%', // 16:9,
     marginTop:'30',
-    // backgroundImage:'url(../../images/testpic1.png)'
+
   },
 }));
 
@@ -52,7 +52,6 @@ export default function Category({category}) {
                 <CardActionArea>
                 <CardMedia
                     className={classes.media}
-                    // style = {{ height: "50px", paddingTop: '56%'}}
                     image={imgHash[category]} 
                 
                     title="Contemplative Reptile"
@@ -62,9 +61,8 @@ export default function Category({category}) {
                     {category.replace('_',' ')}
                     </Typography>
                     <Typography variant="body2" color="textSecondary" component="p">
-                    Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                    across all continents except Antarctica
-                    </Typography>s
+                     continued....
+                    </Typography>
                 </CardContent>
                 </CardActionArea>
                 <CardActions>
