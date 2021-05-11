@@ -18,13 +18,13 @@ import Soups  from "../../images/Soups.png"
 
 const useStyles = makeStyles((theme)=>({
   root: {
-    maxWidth: 345,
+    maxWidth: 288,
     margin: "auto",
     marginTop:theme.spacing(15),
-    padding: theme.spacing(4),
+    // padding: theme.spacing(4),
     height: theme.spacing(50),
-    width: theme.spacing(49),
-    // align:"center"
+    // width: theme.spacing(49),
+ 
   },
   media: {
     height: 90,
@@ -47,7 +47,7 @@ export default function Category({category}) {
 
  
     return (
-        <Grid item xs={12} sm={6} lg={2}>
+        <Grid item xs={12} sm={6} lg={3}>
             <Card className={classes.root}>
                 <CardActionArea>
                 <CardMedia
@@ -60,14 +60,11 @@ export default function Category({category}) {
                     <Typography gutterBottom variant="h5" component="h2">
                     {category.replace('_',' ')}
                     </Typography>
-                    <Typography variant="body2" color="textSecondary" component="p">
-                     continued....
-                    </Typography>
                 </CardContent>
                 </CardActionArea>
                 <CardActions>
                 <Button size="small" color="primary" onClick={(e)=>console.log("cate",category)}>
-                   <Link to={"/menu/"+category}> Share</Link>
+                   <Link to={"/menu/"+category}> Share</Link> 
                 </Button>
                 <Button size="small" color="primary">
                     Learn More

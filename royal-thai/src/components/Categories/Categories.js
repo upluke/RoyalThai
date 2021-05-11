@@ -8,6 +8,8 @@ import { Description } from '@material-ui/icons';
 
 const useStyles = makeStyles((theme) => ({
     gridStyle:{
+      paddingLeft:theme.spacing(15),
+      paddingRight:theme.spacing(15),
       paddingBottom:theme.spacing(15)
     }
  
