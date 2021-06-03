@@ -9,7 +9,7 @@ import Select from '@material-ui/core/Select';
 import { makeStyles } from '@material-ui/core/styles';
 import InputLabel from '@material-ui/core/InputLabel';
 import Items from '../Items/Items'
-
+import Grid from '@material-ui/core/Grid';
 
 const useStyles = makeStyles((theme) => ({
     formControl: {
@@ -89,8 +89,11 @@ export default function MenuPage(props) {
                       
                         return items.map(item=>{
                             console.log(item)
-                            return <Items key={item.id} itemName={item.name} price={item.price} description={item.description} />
-                           
+                            return(
+                                <Grid container spacing={1} direction="row"   >
+                                    <Items key={item.id} itemName={item.name} price={item.price} description={item.description} /> 
+                                </Grid>
+                            )
                             
                         })
                           

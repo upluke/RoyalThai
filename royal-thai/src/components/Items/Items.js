@@ -14,7 +14,7 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
-
+import Grid from '@material-ui/core/Grid';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -49,6 +49,8 @@ export default function Items({itemName, description}) {
 
     return (
         <div >
+          <Grid item xs={12} sm={6} lg={3}>
+       
             <Card className={classes.root}>
                    
                    <CardMedia
@@ -93,6 +95,7 @@ export default function Items({itemName, description}) {
                      </CardContent>
                    </Collapse>
                  </Card>
+            </Grid>
         </div>
     )
 }
