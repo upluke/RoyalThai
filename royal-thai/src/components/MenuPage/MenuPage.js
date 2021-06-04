@@ -82,7 +82,9 @@ export default function MenuPage(props) {
                 }
                 </Select>
             </FormControl>   
+            <Grid container spacing={0} justify="center"     >
             {
+                
                 newDatas.map(([category, items])=>{
                     // console.log(category,"--->", items)
                     if(category===selectedEl){
@@ -90,16 +92,18 @@ export default function MenuPage(props) {
                         return items.map(item=>{
                             console.log(item)
                             return(
-                                <Grid container spacing={1} direction="row"   >
+                                
                                     <Items key={item.id} itemName={item.name} price={item.price} description={item.description} /> 
-                                </Grid>
+                               
                             )
                             
                         })
                           
                     }
                 })
+              
             }
+              </Grid>
 
         </div>
         
