@@ -92,9 +92,9 @@ export default function MenuPage(props) {
                         return items.map(item=>{
                             console.log(item)
                             return(
-                                
-                                    <Items key={item.id} itemName={item.name} price={item.price} description={item.description} /> 
-                               
+                                <Grid item key={item.id} xs={12} md={6} lg={4}>
+                                    <Items itemName={item.name} price={item.price} description={item.description} /> 
+                                </Grid>
                             )
                             
                         })

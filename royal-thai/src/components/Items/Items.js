@@ -49,7 +49,7 @@ export default function Items({itemName, description}) {
 
     return (
         <div >
-          <Grid item xs={12} sm={6} lg={3}>
+    
        
             <Card className={classes.root}>
                    
@@ -95,7 +95,7 @@ export default function Items({itemName, description}) {
                      </CardContent>
                    </Collapse>
                  </Card>
-            </Grid>
+       
         </div>
     )
 }
