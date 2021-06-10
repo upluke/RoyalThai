@@ -47,7 +47,7 @@ export default function Category({category}) {
 
  
     return (
-        <Grid item xs={12} sm={6} lg={3}>
+      
             <Card className={classes.root}>
                 <CardActionArea>
                 <CardMedia
@@ -71,6 +71,6 @@ export default function Category({category}) {
                 </Button>
                 </CardActions>
             </Card>
-      </Grid>
+     
     );
 }

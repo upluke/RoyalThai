@@ -25,12 +25,16 @@ export default function Categories() {
     return (
         <React.Fragment  >
             <Grid container spacing={0} justify="center" className={classes.gridStyle}  >
- 
+            
              {categories.map((el,idx)=>{
-                return  <Category key={idx} category={el} />
+                return  (
+                  <Grid item xs={12} sm={6} lg={3}>
+                    <Category key={idx} category={el} />
+                  </Grid>
+                )
                   })}
+            
             </Grid>
-          
  
         </React.Fragment>
     )
