@@ -82,7 +82,7 @@ export default function MenuPage(props) {
                 }
                 </Select>
             </FormControl>   
-            <Grid container spacing={0} justify="center"     >
+            <Grid container spacing={4}    >
             {
                 
                 newDatas.map(([category, items])=>{
@@ -92,7 +92,7 @@ export default function MenuPage(props) {
                         return items.map(item=>{
                             console.log(item)
                             return(
-                                <Grid item key={item.id} xs={12} md={6} lg={4}>
+                                <Grid item key={item.id} xs={12} sm={6} md={4} >
                                     <Items itemName={item.name} price={item.price} description={item.description} /> 
                                 </Grid>
                             )

@@ -19,6 +19,9 @@ import MoreVertIcon from '@material-ui/icons/MoreVert';
 const useStyles = makeStyles((theme) => ({
     root: {
       maxWidth: 345,
+      height:'100%',
+      display: 'flex',
+      flexDirection:'column'
     },
     media: {
       height: 0,
@@ -55,7 +58,7 @@ export default function Items({itemName, description}) {
                    
                    <CardMedia
                      className={classes.media}
-                     image="/static/images/cards/paella.jpg"
+                     image="https://source.unsplash.com/random"
                      title="Paella dish"
                    />
                    <CardContent>
