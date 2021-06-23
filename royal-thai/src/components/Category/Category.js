@@ -17,13 +17,11 @@ import Salads  from "../../images/Salads.png"
 import Soups  from "../../images/Soups.png"
 
 const useStyles = makeStyles((theme)=>({
-  catGrid:{
-    padding:'30px'
-  },
+ 
   root: {
     // maxWidth: 288,
     margin: "auto",
-    marginTop:theme.spacing(15),
+    marginTop:theme.spacing(10),
     // padding: theme.spacing(4),
     height: theme.spacing(50),
     // width: theme.spacing(49),
@@ -52,7 +50,7 @@ export default function Category({category}) {
 
  
     return (
-         <Container className={classes.catGrid} maxWidth='md'>
+         <Container maxWidth='md'>
             <Card className={classes.root}>
                 <CardActionArea>
                 <CardMedia

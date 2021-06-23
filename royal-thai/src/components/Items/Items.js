@@ -14,9 +14,12 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
-
+import Container from '@material-ui/core/Container';
 
 const useStyles = makeStyles((theme) => ({
+    itemGrid:{
+      padding:'30px'
+    },
     root: {
       maxWidth: 345,
       height:'100%',
@@ -53,7 +56,7 @@ export default function Items({itemName, description}) {
     return (
         <div >
     
-       
+          <Container maxWidth='md' >
             <Card className={classes.root}>
                    
                    <CardMedia
@@ -98,7 +101,7 @@ export default function Items({itemName, description}) {
                      </CardContent>
                    </Collapse>
                  </Card>
-       
+             </Container>
         </div>
     )
 }
