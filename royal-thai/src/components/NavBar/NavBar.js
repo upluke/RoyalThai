@@ -34,9 +34,9 @@ export default function NavBar() {
           <Typography variant="h6" className={classes.title}>
            <Link to="/"  style={{ color: 'inherit', textDecoration: 'inherit'}}> Royal Thai Restaurant</Link>
           </Typography>
-          <Button color="inherit">Login</Button>
-          <Button color="inherit">Login</Button>
-          <Button color="inherit">Login</Button>
+          <Button color="inherit">Menu</Button>
+          <Button color="inherit">About</Button>
+          <Button color="inherit">Contact</Button>
         </Toolbar>
       </AppBar>
     </div>
